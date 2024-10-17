@@ -1,0 +1,10 @@
+<% if user_signed_in? && current_user.admin? %>
+<div class="bg-zinc-800 p-4">
+    <ul>
+        <li>Dashboard</li>
+        <li>Usuários</li>
+        <li>Artigos</li>
+        <li>Newsletter</li>
+    </ul>
+</div>
+<% end %>

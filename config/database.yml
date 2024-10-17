@@ -5,6 +5,7 @@ default: &default
   username: <%= ENV['POSTGRES_USERNAME'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   host: <%= ENV['POSTGRES_HOST'] %>
+  prepared_statements: false
 
 development:
   <<: *default

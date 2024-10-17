@@ -1,21 +1,33 @@
-<h1>Pending Users</h1>
+<div class="bg-zinc-900 text-white flex h-screen">
+  <%= render 'layouts/sidebar' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Approve</th>
-    </tr>
-  </thead>
+  <!-- Div principal que ocupa o restante da tela -->
+  <div class="flex-1 flex flex-col overflow-hidden">
+    
+    <!-- Conteúdo com rolagem -->
+    <div class="flex-1 overflow-y-auto p-8">
+      <h1 class="text-4xl">Usuários pendentes</h1>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td>
-          <%= link_to 'Approve', approve_user_path(user), method: :patch, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <table class="border-collapse border border-slate-500 mt-8">
+        <thead class="bg-slate-700">
+          <tr>
+            <th class="border border-slate-600 p-2">Email</th>
+            <th class="border border-slate-600 p-2">Aprovar</th>
+          </tr>
+        </thead>
+        <tbody class="bg-slate-800">
+          <% @users.each do |user| %>
+            <tr>
+              <td class="border border-slate-700 p-2"><%= user.email %></td>
+              <td class="border border-slate-700 p-2">
+                <%= link_to 'Aprovar', approve_user_path(user), method: :patch, data: { confirm: 'Tem certeza?' } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+    </div>
+    
+  </div>
+</div>
