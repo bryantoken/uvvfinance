@@ -1,0 +1,44 @@
+<div class="bg-zinc-950 min-h-screen text-white">
+  <div class="flex justify-center items-center min-h-screen">
+    <div class="ring-2 ring-indigo-600 rounded-lg drop-shadow-indigo-600 bg-zinc-950 p-10 px-10 min-w-96">
+    <h2 class="text-4xl font-light">Acesso restrito</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "space-y-6" }) do |f| %>
+
+  <!-- Campo de e-mail -->
+  <div class="field">
+    <%= f.label :email, class: "block text-sm font-medium text-gray-200" %>
+    <div class="mt-1">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-zinc-900 text-gray-200" %>
+    </div>
+  </div>
+
+  <!-- Campo de senha -->
+  <div class="field">
+    <%= f.label :password, class: "block text-sm font-medium text-gray-200" %>
+    <div class="mt-1">
+      <%= f.password_field :password, autocomplete: "current-password", class: "w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-zinc-900 text-gray-200" %>
+    </div>
+  </div>
+
+  <!-- Campo de "Lembrar-me" (Opcional) -->
+  <% if devise_mapping.rememberable? %>
+    <div class="flex items-center">
+      <%= f.check_box :remember_me, class: "h-4 w-4 text-indigo-600 border-gray-300 rounded" %>
+      <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-200" %>
+    </div>
+  <% end %>
+
+  <!-- Botão de login -->
+  <div class="actions">
+    <%= f.submit "Log in", class: "w-full hover:cursor-pointer cursor-pointer focus: cursor-pointer flex justify-center py-2 px-4 border border-indigo-600 rounded-lg hover:bg-indigo-600 focus:bg-indigo-600 text-white" %>
+  </div>
+
+<% end %>
+
+
+  <%= render "devise/shared/links" %>
+
+  </div>
+  </div>
+</div>

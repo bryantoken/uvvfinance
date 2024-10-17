@@ -1,0 +1,43 @@
+<div class="bg-zinc-950 min-h-screen">
+  <div class="px-10 pt-10">
+    <div class="grid grid-cols-12 grid-rows-8 gap-4">
+      <div class="bg-zinc-900 rounded-lg col-span-5 row-span-3 p-8 text-white flex flex-col gap-4 hover:drop-shadow-indigo-600 hover:ring-2 ring-indigo-600">
+        <h1 class="font-bold text-4xl leading-relaxed">Conectando Mentes Brilhantes para <span class="highlight">Transformar</span> o futuro do jovem brasileiro</h1>
+        <h2 class="font-light text-2xl">Empoderando decisões financeiras inteligentes para um futuro brilhante</h2>
+         <div class="bg-indigo-600 font-semibold rounded-lg px-4 py-2 w-fit">
+            <%= link_to root_path do %>
+                Quero fazer parte
+            <% end %>
+        </div>
+      </div>
+      <div class="bg-zinc-900 rounded-lg col-span-4 row-span-8 p-8 text-white flex flex-col gap-4 hover:drop-shadow-indigo-600 hover:ring-2 ring-indigo-600">
+        <h1 class="font-bold text-4xl leading-relaxed">Últimos artigos</h1>
+      </div>
+      <div class="bg-zinc-900 rounded-lg row-span-8 col-span-3 p-8 text-white flex flex-col gap-4 hover:drop-shadow-indigo-600 hover:ring-2 ring-indigo-600">
+        <h1 class="font-bold text-4xl leading-relaxed">
+        Notícias
+        </h1>
+      </div>
+      <div class="bg-zinc-900 rounded-lg col-span-5 row-span-5 p-8 text-white flex flex-col gap-4 hover:drop-shadow-indigo-600 hover:ring-2 ring-indigo-600">
+        <h1 class="font-bold text-4xl leading-relaxed">
+        Processo Seletivo
+        </h1>
+        <div id="calendar" class="bg-zinc-900 shadow-lg p-4 rounded-lg"></div>
+        <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth', // Visualização inicial (mês)
+      selectable: true,            // Permite selecionar dias no calendário
+      events: '/events.json'       // URL para buscar eventos (pode personalizar)
+    });
+
+    calendar.render();
+  });
+</script>
+
+      </div>
+    </div>
+  </div>
+</div>

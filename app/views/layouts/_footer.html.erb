@@ -1,0 +1,59 @@
+<footer class="bg-zinc-950 text-white py-10">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Logo e Missão -->
+    <div class="flex flex-col items-start gap-4">
+        <div class="text-white flex flex-row items-center gap-2 text-2xl font-medium">
+        <%= image_tag 'logos/logo_branca.png', alt: 'Logo', class: 'size-16' %>
+            UVV FINANCE
+        </div>
+      <p class="text-sm">Nossa missão é fornecer soluções inovadoras para um futuro melhor.</p>
+    </div>
+
+    <!-- Links de Navegação -->
+    <div>
+      <h5 class="font-bold text-lg mb-4">Navegação</h5>
+      <ul class="space-y-2">
+        <li><a href="/about" class="hover:underline">Sobre Nós</a></li>
+        <li><a href="/services" class="hover:underline">Serviços</a></li>
+        <li><a href="/contact" class="hover:underline">Contato</a></li>
+        <li><a href="/blog" class="hover:underline">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Informações de Contato -->
+    <div>
+      <h5 class="font-bold text-lg mb-4">Contato</h5>
+      <ul class="space-y-2">
+        <li><a href="tel:+1234567890" class="hover:underline">+55 (27) 999189-301</a></li>
+        <li><a href="mailto:atendimento@uvvfinance.com.br" class="hover:underline">atendimento@uvvfinance.com.br</a></li>
+        <li>Avenida Comissário José Dantas de Melo, 21 - Boa Vista II, Vila Velha - ES, 29102-920</li>
+      </ul>
+    </div>
+
+    <!-- Redes Sociais e Newsletter -->
+    <div>
+      <h5 class="font-bold text-lg mb-4">Siga-nos</h5>
+        <div class="flex space-x-4 mb-4">
+            <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-indigo-600">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="text-white hover:text-indigo-600">
+                <i class="fab fa-tiktok fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-white hover:text-indigo-600">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+      <h5 class="font-bold text-lg mb-4">Assine a Newsletter</h5>
+      <form action="#">
+        <input type="email" placeholder="Seu e-mail" class="w-full px-4 py-2 rounded-md bg-gray-800 text-white focus:outline-none">
+        <button type="submit" class="mt-2 w-full px-4 py-2 bg-indigo-600 rounded-md hover:bg-indigo-700">Assinar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Copyright e Créditos -->
+  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+    <p>&copy; 2024 UVVFINANCE. Todos os direitos reservados.</p>
+  </div>
+</footer>

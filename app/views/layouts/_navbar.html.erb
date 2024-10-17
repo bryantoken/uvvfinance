@@ -1,0 +1,59 @@
+<div class="row-span-1 min-w-full bg-zinc-950 px-16 py-2 grid grid-cols-10 sticky top-0 z-50">
+
+    <div class="flex col-span-3 items-center">
+    <%= link_to root_path do %>
+        <div class="text-white flex flex-row items-center gap-2 text-2xl font-medium">
+            <%= image_tag 'logos/logo_branca.png', alt: 'Logo', class: 'size-16' %>
+            UVV FINANCE
+        </div>
+    <% end %>
+    </div>
+
+    <div class="text-white grid grid-cols-1 items-center col-span-4 text-center text-lg font-medium">
+        <ul class="grid grid-cols-6">
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Home
+            <% end %>
+        </li>
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Conteúdo
+            <% end %>
+        </li>
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Artigos
+            <% end %>
+        </li>
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Newsletter
+            <% end %>
+        </li>
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Eventos
+            <% end %>
+        </li>
+        <li class="hover:text-indigo-600">
+            <%= link_to root_path do %>
+                Sobre
+            <% end %>
+        </li>
+        </ul>
+    </div>
+
+    <div class="col-span-3 text-white flex flex-row items-center text-center justify-self-end gap-2 font-medium">
+        <div>
+            <%= link_to new_user_session_path do %>
+                Login
+            <% end %>
+        </div>
+        <div class="bg-indigo-600 font-medium rounded-lg px-4 py-2">
+            <%= link_to new_user_registration_path do %>
+                Inscrever-se
+            <% end %>
+        </div>
+    </div>
+</div>

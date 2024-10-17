@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-200;
+  }
+}
+
+*/
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format('woff2');
+  }
+}
+
+@layer utilities {
+  .highlight {
+    background-color: #4F46E5; /* Cor parecida com terra */
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  .drop-shadow-indigo {
+    filter: drop-shadow(10px 10px 40px rgba(128, 0, 255, 0.124)); /* Cor indigo-600 com opacidade ajustada */
+  }
+  .drop-shadow-indigo-600 {
+    filter: drop-shadow(0px 0px 8px rgba(78, 70, 229, 0.66)); /* Cor indigo-600 com opacidade ajustada */
+  }
+}
+.fc-day-today {
+  background-color: #4F46E5 !important; /* Indigo-600 no Tailwind */
+  color: white; /* Cor do texto */
+}
+
+/* Estilizando a barra de rolagem inteira */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #09090B; /* Cor de fundo */
+}
+
+/* Estilizando o "thumb" (a parte que o usuário arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #27272A; /* Cor da barra */
+    border: #09090B 2px solid;
+    border-radius: 10px;
+}
+
+/* Estilizando ao passar o mouse sobre o thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3f3f46; /* Um cinza escuro para hover */
+}
+
+/* Estilizando a "track" (a área onde a barra de rolagem se move) */
+::-webkit-scrollbar-track {
+    background-color: #09090B; /* Mesmo fundo da barra */
+}
